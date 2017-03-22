@@ -1,4 +1,4 @@
-#' A package to ...
+#' R C/C++ mish-mash of stuff for hrbrmstr
 #'
 #' @name hrbrmiscpp
 #' @docType package

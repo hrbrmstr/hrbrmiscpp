@@ -4,11 +4,10 @@
 \name{hrbrmiscpp}
 \alias{hrbrmiscpp}
 \alias{hrbrmiscpp-package}
-\title{A package to ...}
+\title{R C/C++ mish-mash of stuff for hrbrmstr}
 \description{
-A package to ...
+R C/C++ mish-mash of stuff for hrbrmstr
 }
 \author{
 Bob Rudis (@hrbrmstr)
 }
-
