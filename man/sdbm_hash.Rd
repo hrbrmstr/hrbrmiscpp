@@ -13,9 +13,15 @@ sdbm_hash(x)
 numeric vector of the hashes of \code{x}
 }
 \description{
-SDBM Hash Function
+This algorithm was created for sdbm (a public-domain reimplementation of \code{ndbm})
+database library. it was found to do well in scrambling bits, causing better
+distribution of the keys and fewer splits. It also happens to be a good general
+hashing function with good distribution.
 }
 \examples{
 setdiff(sdbm_hash(state.name), sdbm_hash(state.name))
 ## numeric(0)
+}
+\references{
+\url{http://www.cse.yorku.ca/~oz/hash.html}
 }

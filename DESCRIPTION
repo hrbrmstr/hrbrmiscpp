@@ -2,13 +2,13 @@ Package: hrbrmiscpp
 Type: Package
 Title: hrbrmiscpp title goes here
 Version: 0.1.0
-Date: 2016-06-30
+Date: 2017-03-22
 Author: Bob Rudis (@hrbrmstr)
 Maintainer: Bob Rudis <bob@rudis.net>
 Description: hrbrmiscpp description goes here
-URL: http://github.com/hrbrmstr/hrbrmiscpp
+URL: https://github.com/hrbrmstr/hrbrmiscpp
 BugReports: https://github.com/hrbrmstr/hrbrmiscpp/issues
-License: AGPL
+License: GPL-2
 Suggests:
     testthat
 Depends:

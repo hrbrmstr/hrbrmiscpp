@@ -10,7 +10,7 @@ The following functions are implemented:
 
 - `sdbm_hash`:	SDBM Hash Function
 - `djb2_hash`:	DJB2 Hash Function
-- `line_count`:	Count lines (fast, like "wc)
+- `line_count`:	Count lines (fast, like `wc` because it _is_ `wc`)
 
 The following data sets are included:
 

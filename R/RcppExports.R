@@ -3,9 +3,16 @@
 
 #' SDBM Hash Function
 #'
+#' This algorithm was created for sdbm (a public-domain reimplementation of `ndbm`)
+#' database library. it was found to do well in scrambling bits, causing better
+#' distribution of the keys and fewer splits. It also happens to be a good general
+#' hashing function with good distribution.
+#'
+#' @md
 #' @param x character vector of strings to hash
 #' @return numeric vector of the hashes of \code{x}
 #' @export
+#' @references [http://www.cse.yorku.ca/~oz/hash.html](http://www.cse.yorku.ca/~oz/hash.html)
 #' @examples
 #' setdiff(sdbm_hash(state.name), sdbm_hash(state.name))
 #' ## numeric(0)
@@ -15,9 +22,14 @@ sdbm_hash <- function(x) {
 
 #' DJB2 Hash Function
 #'
+#' Dan Berstein's hash function. A variation on a [linear congruential generator](https://rosettacode.org/wiki/Linear_congruential_generator)
+#' It's fast but does a good job of producing decently distributed hash values.
+#'
 #' @param x character vector of strings to hash
 #' @return numeric vector of the hashes of \code{x}
 #' @export
+#' @references [http://www.cse.yorku.ca/~oz/hash.html](http://www.cse.yorku.ca/~oz/hash.html) and
+#'             [https://groups.google.com/forum/#!msg/comp.lang.c/lSKWXiuNOAk/zstZ3SRhCjgJ](https://groups.google.com/forum/#!msg/comp.lang.c/lSKWXiuNOAk/zstZ3SRhCjgJ)
 #' @examples
 #' setdiff(djb2_hash(state.name), djb2_hash(state.name))
 #' ## numeric(0)
@@ -25,10 +37,15 @@ djb2_hash <- function(x) {
     .Call('hrbrmiscpp_djb2_hash', PACKAGE = 'hrbrmiscpp', x)
 }
 
-#' Count lines (fast, like "wc")
+#' Count lines (fast, like `wc` because it *is* `wc`)
 #'
+#' This is just the line count portion of the `wc` source code ripped out and put
+#' into a C-backed R function.
+#'
+#' @md
 #' @param f full path to file
 #' @export
+#' @references [GNU `wc` source code](https://www.gnu.org/software/cflow/manual/html_node/Source-of-wc-command.html)
 #' @examples
 #' line_count(system.file("extdata", "lines.csv", package = "hrbrmiscpp"))
 line_count <- function(f) {

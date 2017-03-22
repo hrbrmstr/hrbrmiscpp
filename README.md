@@ -7,7 +7,7 @@ The following functions are implemented:
 
 -   `sdbm_hash`: SDBM Hash Function
 -   `djb2_hash`: DJB2 Hash Function
--   `line_count`: Count lines (fast, like "wc)
+-   `line_count`: Count lines (fast, like `wc` because it *is* `wc`)
 
 The following data sets are included:
 
@@ -55,7 +55,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Wed Mar 22 09:14:19 2017"
+    ## [1] "Wed Mar 22 09:36:23 2017"
 
 ``` r
 test_dir("tests/")

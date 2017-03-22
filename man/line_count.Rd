@@ -2,7 +2,7 @@
 % Please edit documentation in R/RcppExports.R
 \name{line_count}
 \alias{line_count}
-\title{Count lines (fast, like "wc")}
+\title{Count lines (fast, like \code{wc} because it \emph{is} \code{wc})}
 \usage{
 line_count(f)
 }
@@ -10,8 +10,12 @@ line_count(f)
 \item{f}{full path to file}
 }
 \description{
-Count lines (fast, like "wc")
+This is just the line count portion of the \code{wc} source code ripped out and put
+into a C-backed R function.
 }
 \examples{
 line_count(system.file("extdata", "lines.csv", package = "hrbrmiscpp"))
+}
+\references{
+\href{https://www.gnu.org/software/cflow/manual/html_node/Source-of-wc-command.html}{GNU wc source code}
 }
